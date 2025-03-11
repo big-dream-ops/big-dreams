@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض عيد الأم والمرأة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: center;
+        }
+        header {
+            background-color: #f15a29;
+            color: white;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .quote {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 10px;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-gallery img {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+        .button {
+            background-color: #f15a29;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #e04b1b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>عيد الأم وعيد المرأة</h1>
+    <p>احتفلوا معًا بدور الأم والمرأة في العالم!</p>
+</header>
+
+<section>
+    <h2>دور المرأة في العالم</h2>
+    <p>لقد كان للمرأة دور كبير في جميع المجالات: السياسة، والفن، والعلوم، والتعليم. من ماريا كوري إلى ملالا، المرأة قدوة للأجيال القادمة.</p>
+    <div class="image-gallery">
+        <img src="https://example.com/image1.jpg" alt="المرأة في السياسة">
+        <img src="https://example.com/image2.jpg" alt="المرأة في العلم">
+        <img src="https://example.com/image3.jpg" alt="المرأة في الفن">
+    </div>
+    <p class="quote">"المرأة تملك القدرة على تغيير العالم."</p>
+</section>
+
+<section>
+    <h2>تاريخ المرأة في صور</h2>
+    <div class="image-gallery">
+        <img src="https://example.com/women-history1.jpg" alt="النساء عبر العصور 1">
+        <img src="https://example.com/women-history2.jpg" alt="النساء عبر العصور 2">
+    </div>
+    <p class="quote">"النساء هن أساس المجتمع المتقدم."</p>
+</section>
+
+<section>
+    <h2>كيف أصف أمي؟</h2>
+    <p>يرجى إدخال كلمة واحدة تصف بها أمك:</p>
+    <form action="https://www.example.com/form-submit" method="POST">
+        <input type="text" name="description" placeholder="وصف أمك في كلمة واحدة" required>
+        <button type="submit" class="button">إرسال</button>
+    </form>
+</section>
+
+<section>
+    <h2>اقتباسات ملهمة عن الأم والمرأة</h2>
+    <p>"أمي، هي الحياة."</p>
+    <p>"المرأة قوة لا يمكن تجاهلها."</p>
+</section>
+
+<section>
+    <h2>شكرًا لكِ أمي</h2>
+    <p>الشجرة الإلكترونية لشكر الأمهات:</p>
+    <p>من فضلك قم بإضافة كلمة شكر لأمك هنا:</p>
+    <form action="https://www.example.com/thank-you-form" method="POST">
+        <input type="text" name="thankYou" placeholder="كلمة شكر لأمك" required>
+        <button type="submit" class="button">إضافة شكر</button>
+    </form>
+</section>
+
+</body>
+</html>
