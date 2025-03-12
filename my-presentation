@@ -1,107 +1,139 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عرض عيد الأم والمرأة</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            text-align: center;
-        }
-        header {
-            background-color: #f15a29;
-            color: white;
-            padding: 20px;
-        }
-        section {
-            padding: 20px;
-            margin: 10px 0;
-        }
-        .quote {
-            font-size: 1.2em;
-            color: #555;
-            margin-top: 10px;
-        }
-        .image-gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .image-gallery img {
-            max-width: 300px;
-            border-radius: 8px;
-        }
-        .button {
-            background-color: #f15a29;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #e04b1b;
-        }
-    </style>
+    <title>Interactive Mother's Day & Women's Celebration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>عيد الأم وعيد المرأة</h1>
-    <p>احتفلوا معًا بدور الأم والمرأة في العالم!</p>
-</header>
+    <header>
+        <h1>Welcome to Our Interactive Celebration 🎉</h1>
+        <nav>
+            <button onclick="showSection('thankTree')">🌳 Shukran Mom</button>
+            <button onclick="showSection('womenRole')">🌍 Women's Role</button>
+            <button onclick="showSection('describeMom')">💖 Describe Mom</button>
+            <button onclick="showSection('inspiringQuotes')">✨ Inspiring Quotes</button>
+            <button onclick="showSection('womenHistory')">📸 Women's History</button>
+        </nav>
+    </header>
 
-<section>
-    <h2>دور المرأة في العالم</h2>
-    <p>لقد كان للمرأة دور كبير في جميع المجالات: السياسة، والفن، والعلوم، والتعليم. من ماريا كوري إلى ملالا، المرأة قدوة للأجيال القادمة.</p>
-    <div class="image-gallery">
-        <img src="https://example.com/image1.jpg" alt="المرأة في السياسة">
-        <img src="https://example.com/image2.jpg" alt="المرأة في العلم">
-        <img src="https://example.com/image3.jpg" alt="المرأة في الفن">
-    </div>
-    <p class="quote">"المرأة تملك القدرة على تغيير العالم."</p>
-</section>
+    <main>
+        <!-- Shukran Mom Tree Section -->
+        <section id="thankTree" class="content">
+            <h2>🌳 Shukran Mom - The Gratitude Tree</h2>
+            <p>Scan the QR Code below and add your message to our gratitude tree.</p>
+            <img src="qr-thankTree.png" alt="QR Code for Shukran Mom">
+        </section>
 
-<section>
-    <h2>تاريخ المرأة في صور</h2>
-    <div class="image-gallery">
-        <img src="https://example.com/women-history1.jpg" alt="النساء عبر العصور 1">
-        <img src="https://example.com/women-history2.jpg" alt="النساء عبر العصور 2">
-    </div>
-    <p class="quote">"النساء هن أساس المجتمع المتقدم."</p>
-</section>
+        <!-- Women's Role Section -->
+        <section id="womenRole" class="content">
+            <h2>🌍 Women's Role in the World</h2>
+            <p>Women have played a crucial role in shaping history and our present world...</p>
+            <img src="qr-womenRole.png" alt="QR Code for Women's Role">
+        </section>
 
-<section>
-    <h2>كيف أصف أمي؟</h2>
-    <p>يرجى إدخال كلمة واحدة تصف بها أمك:</p>
-    <form action="https://www.example.com/form-submit" method="POST">
-        <input type="text" name="description" placeholder="وصف أمك في كلمة واحدة" required>
-        <button type="submit" class="button">إرسال</button>
-    </form>
-</section>
+        <!-- Describe Mom Section -->
+        <section id="describeMom" class="content">
+            <h2>💖 How Would You Describe Your Mom?</h2>
+            <p>Enter one word to describe your mother:</p>
+            <input type="text" id="userInput" placeholder="Type here">
+            <button onclick="submitAnswer()">Submit</button>
+            <p id="response"></p>
+            <img src="qr-describeMom.png" alt="QR Code for Describe Mom">
+        </section>
 
-<section>
-    <h2>اقتباسات ملهمة عن الأم والمرأة</h2>
-    <p>"أمي، هي الحياة."</p>
-    <p>"المرأة قوة لا يمكن تجاهلها."</p>
-</section>
+        <!-- Inspiring Quotes Section -->
+        <section id="inspiringQuotes" class="content">
+            <h2>✨ Inspiring Quotes about Mothers & Women</h2>
+            <p>"A mother is she who can take the place of all others but whose place no one else can take." – Cardinal Mermillod</p>
+            <img src="qr-inspiringQuotes.png" alt="QR Code for Inspiring Quotes">
+        </section>
 
-<section>
-    <h2>شكرًا لكِ أمي</h2>
-    <p>الشجرة الإلكترونية لشكر الأمهات:</p>
-    <p>من فضلك قم بإضافة كلمة شكر لأمك هنا:</p>
-    <form action="https://www.example.com/thank-you-form" method="POST">
-        <input type="text" name="thankYou" placeholder="كلمة شكر لأمك" required>
-        <button type="submit" class="button">إضافة شكر</button>
-    </form>
-</section>
+        <!-- Women's History Section -->
+        <section id="womenHistory" class="content">
+            <h2>📸 Women's History in Pictures</h2>
+            <p>Discover the journey of women throughout history with these inspiring images.</p>
+            <img src="women-history1.jpg" alt="Women in History">
+            <img src="women-history2.jpg" alt="Women Leaders">
+            <img src="qr-womenHistory.png" alt="QR Code for Women's History">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Interactive Women's Celebration</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function submitAnswer() {
+            let userInput = document.getElementById("userInput").value;
+            if (userInput.trim() !== "") {
+                document.getElementById("response").innerHTML = "You described your mom as: <strong>" + userInput + "</strong> 💖";
+            }
+        }
+
+        // Show the first section by default
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection('thankTree');
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ff6f61;
+            padding: 15px;
+            color: white;
+        }
+
+        nav {
+            margin: 10px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 200px;
+            margin: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 
 </body>
 </html>
